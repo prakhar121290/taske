@@ -1,0 +1,14 @@
+version: "2"
+services:
+  tasker:
+    build: .
+    image: tasker
+    expose:
+     - 8080
+    ports:
+     - 8080:8080
+    environment:
+      GITHUB_CLIENT_ID: e83f1b93fa1f5193901a
+      GITHUB_CLIENT_SECRET: 21b9955607bca82dbae5e2ce28c9a9393289e99c
+      MONGO_URL: mongodb://tasker:tasker@ds049180.mlab.com:49180/gamersdemokrasy
+      PORT: 8080
